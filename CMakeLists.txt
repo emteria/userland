@@ -21,7 +21,7 @@ get_filename_component(VIDEOCORE_ROOT . ABSOLUTE)
 set(VCOS_PTHREADS_BUILD_SHARED TRUE)
 
 include(makefiles/cmake/global_settings.cmake)
-include(makefiles/cmake/arm-linux.cmake)
+#include(makefiles/cmake/arm-linux.cmake)
 include(makefiles/cmake/vmcs.cmake)
 
 enable_language(ASM)
