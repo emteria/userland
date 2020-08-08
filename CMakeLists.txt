@@ -24,7 +24,7 @@ include(makefiles/cmake/global_settings.cmake)
 #include(makefiles/cmake/arm-linux.cmake)
 include(makefiles/cmake/vmcs.cmake)
 
-enable_language(ASM)
+#enable_language(ASM)
 
 # Global include paths
 include_directories(host_applications/framework)
