@@ -45,7 +45,7 @@ else ()
 #                core/ilfifo.c
                 )
 
-   target_link_libraries (openmaxil vcilcs vcos dl)
+   target_link_libraries (openmaxil vcilcs bcm_host vcos dl)
 
 endif ()
 
