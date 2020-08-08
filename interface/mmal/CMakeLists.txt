@@ -1,3 +1,4 @@
+set(LIBRARY_TYPE STATIC)
 # We support building both static and shared libraries
 if (NOT DEFINED LIBRARY_TYPE)
 set(LIBRARY_TYPE SHARED)
