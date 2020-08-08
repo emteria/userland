@@ -17,4 +17,5 @@ add_library (mmal_omxutil ${LIBRARY_TYPE}
    mmalomx_util_params_misc.c
 )
 
+target_link_libraries (mmal_omxutil mmal_core mmal_util vcos)
 target_link_libraries (mmal_omx mmal_omxutil mmal_core mmal_util vcos)
