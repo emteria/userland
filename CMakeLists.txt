@@ -80,7 +80,7 @@ endif()
 
 # VidTex supports Android and Linux
 if(BUILD_MMAL_APPS)
-add_subdirectory(host_applications/android/apps/vidtex)
+#add_subdirectory(host_applications/android/apps/vidtex)
 endif(BUILD_MMAL_APPS)
 
 if(NOT ARM64)
