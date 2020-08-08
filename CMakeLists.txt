@@ -19,6 +19,7 @@ set(vmcs_root ${PROJECT_SOURCE_DIR})
 get_filename_component(VIDEOCORE_ROOT . ABSOLUTE)
 
 set(VCOS_PTHREADS_BUILD_SHARED TRUE)
+set(CMAKE_C_STANDARD_LIBRARIES "-llog")
 
 include(makefiles/cmake/global_settings.cmake)
 #include(makefiles/cmake/arm-linux.cmake)
