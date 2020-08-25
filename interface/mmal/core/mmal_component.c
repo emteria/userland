@@ -724,14 +724,22 @@ static MMAL_COMPONENT_SUPPLIER_T *suppliers;
 /** Create an instance of a component  */
 static MMAL_STATUS_T mmal_component_supplier_create(const char *name, MMAL_COMPONENT_T *component)
 {
+   //name und compoonent ausgeben
+   LOG_INFO("MMMAL-OUT name und component '%s' '%s'", name, component->name);
+
    MMAL_COMPONENT_SUPPLIER_T *supplier = suppliers;
    MMAL_STATUS_T status = MMAL_ENOSYS;
    const char *dot = strchr(name, '.');
    size_t dot_size = dot ? dot - name : (int)strlen(name);
 
+   int i = 0;
    /* walk list of suppliers to see if any can create this component */
+   LOG_ERROR("MMAL mmal run through suppliers 0");
    while (supplier)
    {
+      LOG_ERROR("MMAL mmal run through suppliers 1");
+      LOG_INFO("MMAL-OUT supplier %d prefix: %s", i, supplier->prefix);
+      //TO-DO Output
       if (strlen(supplier->prefix) == dot_size && !memcmp(supplier->prefix, name, dot_size))
       {
          status = supplier->create(name, component);
@@ -739,7 +747,9 @@ static MMAL_STATUS_T mmal_component_supplier_create(const char *name, MMAL_COMPO
             break;
       }
       supplier = supplier->next;
+      i++;
    }
+   LOG_ERROR("MMAL mmal run through suppliers 2");
    return status;
 }
 

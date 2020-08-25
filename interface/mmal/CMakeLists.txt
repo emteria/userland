@@ -1,4 +1,4 @@
-set(LIBRARY_TYPE STATIC)
+#set(LIBRARY_TYPE STATIC)
 # We support building both static and shared libraries
 if (NOT DEFINED LIBRARY_TYPE)
 set(LIBRARY_TYPE SHARED)
@@ -6,7 +6,7 @@ endif (NOT DEFINED LIBRARY_TYPE)
 
 add_definitions(-Wall -Werror)
 
-add_library(mmal SHARED util/mmal_util.c)
+add_library(mmal STATIC util/mmal_util.c)
 
 add_subdirectory(core)
 add_subdirectory(util)
@@ -15,7 +15,7 @@ add_subdirectory(components)
 add_subdirectory(openmaxil)
 add_subdirectory(client)
 
-target_link_libraries(mmal mmal_core mmal_util mmal_vc_client vcos mmal_components)
+target_link_libraries(mmal mmal_util mmal_core mmal_vc_client vcos mmal_components)
 
 install(TARGETS mmal DESTINATION lib)
 install(FILES

@@ -4,9 +4,50 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libmmal
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_SRC_FILES := build/lib/libmmal.so
+LOCAL_MODULE_SUFFIX := .a
+LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := build/lib/libmmal.a
+include $(BUILD_PREBUILT)
+
+#######################################################
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmal_util
+LOCAL_MODULE_SUFFIX := .a
+LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := build/lib/libmmal_util.a
+include $(BUILD_PREBUILT)
+
+#######################################################
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmal_core
+LOCAL_MODULE_SUFFIX := .a
+LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := build/lib/libmmal_core.a
+include $(BUILD_PREBUILT)
+
+#######################################################
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmal_vc_client
+LOCAL_MODULE_SUFFIX := .a
+LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := build/lib/libmmal_vc_client.a
+include $(BUILD_PREBUILT)
+
+#######################################################
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmal_components
+LOCAL_MODULE_SUFFIX := .a
+LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := build/lib/libmmal_components.a
 include $(BUILD_PREBUILT)
 
 #######################################################

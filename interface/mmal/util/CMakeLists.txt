@@ -10,7 +10,7 @@ add_library (mmal_util ${LIBRARY_TYPE}
    mmal_util_rational.c
 )
 
-target_link_libraries (mmal_util vcos)
+target_link_libraries (mmal_util mmal_core vcos)
 
 install(TARGETS mmal_util DESTINATION lib)
 install(FILES
