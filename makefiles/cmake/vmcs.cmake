@@ -8,7 +8,7 @@ INCLUDE(CPack)
 
 # Where shall we install?
 if (ANDROID)
-  SET(VMCS_INSTALL_PREFIX "/vendor/brcm/islands" CACHE PATH "Prefix prepended to install directories" FORCE)
+  SET(VMCS_INSTALL_PREFIX "" CACHE PATH "Prefix prepended to install directories" FORCE)
 elseif(NOT DEFINED VMCS_INSTALL_PREFIX)
   SET(VMCS_INSTALL_PREFIX "" CACHE PATH "Prefix prepended to install directories" FORCE)
 endif()
