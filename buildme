@@ -9,7 +9,8 @@ ANDROID_ARM_NEON=ON
 ANDROID_NATIVE_API_LEVEL=24
 ANDROID_NO_UNDEFINED=OFF # when "ON" show all undefined symbols as linker errors
 ANDROID_SO_UNDEFINED=OFF # when "ON" allow undefined symbols in shared libraries
-DESTDIR=../build2
+
+DESTDIR=../build
 
 mkdir -p temp
 pushd temp
