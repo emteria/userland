@@ -24,7 +24,6 @@ cmake -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE \
 -DANDROID_SO_UNDEFINED=$ANDROID_SO_UNDEFINED \
 ../
 
-make -j `nproc`
-sudo make -j `nproc` install DESTDIR=$DESTDIR
+make -j `nproc` install DESTDIR=$DESTDIR
 
 popd
