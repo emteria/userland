@@ -7,8 +7,8 @@ ANDROID_ABI=armeabi-v7a
 ANDROID_TOOLCHAIN=clang
 ANDROID_ARM_NEON=ON
 ANDROID_NATIVE_API_LEVEL=24
-ANDROID_NO_UNDEFINED=OFF # when "ON" show all undefined symbols as linker errors
-ANDROID_SO_UNDEFINED=OFF # when "ON" allow undefined symbols in shared libraries
+ANDROID_NO_UNDEFINED=OFF # when "ON" show all undefined symbols as linker errors (standard value ist "ON")
+ANDROID_SO_UNDEFINED=OFF # when "ON" allow undefined symbols in shared libraries (standard value is "OFF")
 
 DESTDIR=../build
 
@@ -24,7 +24,6 @@ cmake -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE \
 -DANDROID_SO_UNDEFINED=$ANDROID_SO_UNDEFINED \
 ../
 
-#cmake --build .
 make -j `nproc`
 sudo make -j `nproc` install DESTDIR=$DESTDIR
 
