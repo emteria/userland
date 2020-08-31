@@ -7,8 +7,9 @@ ANDROID_ABI=armeabi-v7a
 ANDROID_TOOLCHAIN=clang
 ANDROID_ARM_NEON=ON
 ANDROID_NATIVE_API_LEVEL=24
-ANDROID_NO_UNDEFINED=OFF # when "ON" show all undefined symbols as linker errors (standard value ist "ON")
-ANDROID_SO_UNDEFINED=OFF # when "ON" allow undefined symbols in shared libraries (standard value is "OFF")
+ANDROID_NO_UNDEFINED=OFF    # when "ON" show all undefined symbols as linker errors (standard value ist "ON")
+                            # needed because mmal libs wouldn't build because of circular dependencies
+ANDROID_SO_UNDEFINED=OFF    # when "ON" allow undefined symbols in shared libraries (standard value is "OFF")
 
 DESTDIR=../build
 
