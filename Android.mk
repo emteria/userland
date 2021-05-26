@@ -113,7 +113,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE := mmal_vc_diag
 LOCAL_CHECK_ELF_FILES := false
-LOCAL_SRC_FILES :=prebuilt/armeabi-v7a/bin/mmal_vc_diag
+LOCAL_SRC_FILES := prebuilt/armeabi-v7a/bin/mmal_vc_diag
 LOCAL_MODULE_CLASS := EXECUTABLES
 include $(BUILD_PREBUILT)
 
