@@ -6,7 +6,6 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libmmal
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
 LOCAL_SHARED_LIBRARIES := libc libdl liblog libvchiq_arm libvcos
 LOCAL_MODULE_TARGET_ARCH := arm
 LOCAL_SRC_FILES_arm := prebuilt/armeabi-v7a/lib/libmmal.so
@@ -131,7 +130,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libvcilcs
 LOCAL_MODULE_SUFFIX := .a
 LOCAL_MODULE_CLASS := STATIC_LIBRARIES
-LOCAL_MODULE_TARGET_ARCH := arm 
+LOCAL_MODULE_TARGET_ARCH := arm
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES_arm := prebuilt/armeabi-v7a/lib/libvcilcs.a
 include $(BUILD_PREBUILT)
