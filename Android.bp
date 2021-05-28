@@ -1,10 +1,9 @@
 
-
 //######################################################
 
 cc_prebuilt_library_shared {
     name: "libmmal",
-    vendor_available: true,
+    vendor: true,
 
     shared_libs: [
         "libc",
@@ -14,6 +13,7 @@ cc_prebuilt_library_shared {
         "libvcos",
     ],
 
+    compile_multilib: "32",
     arch: {
         arm: {
             srcs: ["prebuilt/armeabi-v7a/lib/libmmal.so"],
@@ -144,6 +144,7 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "mmal_vc_diag",
+    vendor: true,
 
     shared_libs: [
         "libc",
@@ -166,7 +167,9 @@ cc_prebuilt_binary {
 
 cc_prebuilt_library_shared {
     name: "libopenmaxil",
+    vendor: true,
 
+    compile_multilib: "32",
     arch: {
         arm: {
             srcs: ["prebuilt/armeabi-v7a/lib/libopenmaxil.so"],
@@ -178,6 +181,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcontainers",
+    vendor: true,
 
     compile_multilib: "32",
     arch: {
@@ -225,7 +229,9 @@ cc_prebuilt_library_static {
 
 cc_prebuilt_library_static {
     name: "libvcilcs",
+    vendor: true,
 
+    compile_multilib: "32",
     arch: {
         arm: {
             srcs: ["prebuilt/armeabi-v7a/lib/libvcilcs.a"],
@@ -237,7 +243,9 @@ cc_prebuilt_library_static {
 
 cc_prebuilt_library_static {
     name: "libvcsm",
+    vendor: true,
 
+    compile_multilib: "32",
     arch: {
         arm: {
             srcs: ["prebuilt/armeabi-v7a/lib/libvcsm.a"],
