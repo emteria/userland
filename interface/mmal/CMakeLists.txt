@@ -89,3 +89,4 @@ install(TARGETS mmal_vc_diag RUNTIME DESTINATION bin)
 
 add_subdirectory(client)
 add_subdirectory(test)
+add_subdirectory(util)
